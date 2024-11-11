@@ -94,3 +94,17 @@ h1 {
 .character p {
     font-size: 1em;
 }
+
+.arco img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.arco img.arco-gif {
+    width: auto !important;
+    height: auto !important;
+    object-fit: initial;
+}
+
