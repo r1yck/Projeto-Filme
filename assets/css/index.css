@@ -1,0 +1,17 @@
+@import url('./styles.css');
+
+/* Estilos específicos para a página inicial */
+.container {
+    justify-content: flex-start;
+}
+
+.content p {
+    font-size: 1.2em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content p {
+        font-size: 1em;
+    }
+}

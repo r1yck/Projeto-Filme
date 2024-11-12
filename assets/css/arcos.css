@@ -1,0 +1,27 @@
+@import url('./styles.css');
+
+/* Estilos específicos para a página de arcos */
+.arcos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arco {
+    margin: 20px;
+}
+
+.arco img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .arco img {
+        width: 150px;
+        height: 220px;
+    }
+}

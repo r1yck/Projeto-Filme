@@ -20,6 +20,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
 }
 
 nav a {
@@ -32,14 +33,12 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Centraliza o conteúdo */
+/* Container e alinhamento */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Alinha o conteúdo mais para cima */
-    height: 50vh;
-    padding-top: 100px; /* Ajuste conforme necessário para posicionamento */
+    padding-top: 100px; /* Compensa o menu fixo */
 }
 
 h1 {
@@ -59,52 +58,44 @@ h1 {
 }
 
 .content p {
-    text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.characters {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    nav a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .container {
+        padding-top: 80px;
+    }
+
+    .content {
+        padding: 5px;
+        font-size: 0.95em;
+    }
 }
 
-.character {
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 80%;
-    max-width: 600px;
-}
+/* Responsividade para o menu em colunas */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Alinha os links em coluna */
+        align-items: center;
+    }
 
-.character img {
-    width: 100%;
-    border-radius: 10px;
-    width: 300px;
-    height: auto;
-    margin: 10px 0; 
-}
+    nav a {
+        padding: 10px 0; /* Ajusta o padding dos links para espaçamento vertical */
+        width: 100%; /* Faz os links ocuparem toda a largura */
+        text-align: center;
+    }
 
-.character h2 {
-    font-size: 1.8em;
-    margin: 10px 0;
+    body {
+        padding-top: 115px; /* Ajuste conforme necessário */
+    }
 }
-
-.character p {
-    font-size: 1em;
-}
-
-.arco img {
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.arco img.arco-gif {
-    width: auto !important;
-    height: auto !important;
-    object-fit: initial;
-}
-
