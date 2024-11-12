@@ -1,6 +1,5 @@
 @import url('./styles.css');
 
-/* Estilos específicos para a página de personagens */
 .characters {
     display: flex;
     flex-direction: column;

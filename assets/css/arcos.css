@@ -1,9 +1,8 @@
 @import url('./styles.css');
 
-/* Estilos específicos para a página de arcos */
 .arcos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Três colunas de tamanho igual */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-items: center;
 }
@@ -19,19 +18,18 @@
     border-radius: 10px;
 }
 
-/* Centraliza o arco "Incidente de Shibuya" na linha */
 .centralizado {
-    grid-column: 2; /* Posiciona o item na segunda coluna da linha */
+    grid-column: 2;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .arcos {
-        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .centralizado {
-        grid-column: auto; /* Remove o posicionamento fixo em telas pequenas */
+        grid-column: auto;
     }
     
     .arco img {
@@ -42,6 +40,6 @@
 
 @media (max-width: 480px) {
     .arcos {
-        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+        grid-template-columns: 1fr;
     }
 }
